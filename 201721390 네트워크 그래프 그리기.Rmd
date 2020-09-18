@@ -71,20 +71,20 @@ animal %>%
   mutate(eig=centrality_eigen()) %>%
   as_tibble %>%
   arrange(desc(eig)) %>%
-  head(5)
+  head(10)
 
 #다른 중심성 계산해보기
 animal %>% 
   as_tbl_graph() %>% 
   mutate(bet=centrality_degree()) %>% #연결 중심성
   as_tibble %>%
-  head(5)
+  head(10)
 
 animal %>% 
   as_tbl_graph() %>% 
   mutate(clo=centrality_betweenness()) %>% #매개 중심성
   as_tibble %>%
-  head(5)
+  head(10)
 
 ```
 
